@@ -1,0 +1,7 @@
+'use client';
+import {useState} from 'react';
+import {motion,AnimatePresence,useReducedMotion} from 'motion/react';
+import {trades} from '@/lib/content';
+import {Button,Photo} from './site';
+import {ArrowUpRight} from 'lucide-react';
+export default function Explorer(){const [active,setActive]=useState(0);const reduced=useReducedMotion();return <div className="explorer"><div className="trade-tabs" role="tablist" aria-label="Workforce categories" aria-orientation="vertical">{trades.map(([name],i)=><button key={name} id={`trade-${i}`} role="tab" aria-selected={active===i} aria-controls="trade-panel" tabIndex={active===i?0:-1} onClick={()=>setActive(i)} onKeyDown={e=>{if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();const n=e.key==='Home'?0:e.key==='End'?trades.length-1:(active+(e.key==='ArrowDown'?1:-1)+trades.length)%trades.length;setActive(n);document.getElementById(`trade-${n}`)?.focus();}}}><span>0{i+1}</span>{name}<ArrowUpRight size={19}/></button>)}</div><div id="trade-panel" role="tabpanel" aria-labelledby={`trade-${active}`}><AnimatePresence mode="wait"><motion.div key={active} initial={{opacity:reduced?1:0}} animate={{opacity:1}} exit={{opacity:reduced?1:0}} transition={{duration:.18}}><Photo name={trades[active][2]} alt={`${trades[active][0]} on a construction site`}/><div className="trade-description"><p>{trades[active][1]}</p><Button href={`/contact?category=${encodeURIComponent(trades[active][0])}`}>Enquire about this trade</Button></div></motion.div></AnimatePresence></div></div>}
