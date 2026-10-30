@@ -39,7 +39,7 @@ All enquiries are addressed to `info@burjalaweer.com`; the enquirer's email is u
 ## Assets and launch requirements
 
 - `public/company-profile.pdf` is the supplied original. Company logo, client logos and the hero photograph were extracted from it. Business copy follows that profile. Client logos are low-resolution source assets, not recreated wordmarks.
-- The high-resolution attached PNG logo was visible in chat but not supplied as a readable cloud file. Replace `public/images/logo.png` with that original before launch.
+- The original architectural logo supplied in the ZIP is used unchanged at `public/images/burj-al-aweer-logo.png` in the header, footer and organization metadata.
 - The PDF hero is only 396×224 pixels and is a temporary source asset. It needs a licensed high-resolution replacement.
 - `public/images/{construction,infrastructure,industrial,carpentry,steel,masonry,team,planning}.svg` are deliberate architectural placeholders. They are not photographs of company projects. Replace them with licensed, subject-appropriate photography and update the `Photo` asset extension mapping in `components/site.tsx`. Do not launch as a final photography-complete design.
 - Photography downloads from `images.unsplash.com` were blocked with HTTP 403. Network domain additions were saved to the environment draft; saving did not activate runtime access.
