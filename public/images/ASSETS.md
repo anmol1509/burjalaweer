@@ -17,3 +17,5 @@ The following photorealistic illustrative images were generated using OpenAI ima
 These assets are illustrative and do not document Burj Al Aweer personnel, client sites, completed projects, or endorsements. The hero includes the user-supplied Burj Al Aweer logo applied to the backs of the three workers’ safety vests. This is an illustrative brand image, not evidence of actual employees or a documented project. Original generated files are retained at `/workspace/generated_images` in the setup environment. They replace the architectural placeholders and low-resolution PDF hero; no external stock-photo license is represented.
 
 `burj-al-aweer-logo.png` is the original image supplied by the user in a ZIP. `client-0.png` through `client-5.png` and `profile-workforce.png` come from the supplied company profile PDF.
+
+`burj-al-aweer-logo-transparent.png` is a background-removed derivative of the user-supplied logo, created with the image editing tool. It has a true PNG alpha channel and is used for the header, footer and organization metadata. The original white-background asset is retained.

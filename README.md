@@ -39,7 +39,7 @@ All enquiries are addressed to `info@burjalaweer.com`; the enquirer's email is u
 ## Assets and launch requirements
 
 - `public/company-profile.pdf` is the supplied original. The legacy company logo, client logos and original workforce photograph were extracted from it. Business copy follows that profile. Client logos are low-resolution source assets, not recreated wordmarks.
-- The original architectural logo supplied in the ZIP is used unchanged at `public/images/burj-al-aweer-logo.png` in the header, footer and organization metadata.
+- The original architectural logo supplied in the ZIP is preserved at `public/images/burj-al-aweer-logo.png`. A transparent-background version at `public/images/burj-al-aweer-logo-transparent.png` is used in the header, footer and organization metadata so the sticky header has no white image rectangle.
 - The low-resolution PDF hero has been replaced with a high-resolution photorealistic generated workforce image.
 - `public/images/{hero-workforce-branded,construction,infrastructure,industrial,carpentry,steel,masonry,team,planning}.png` are photorealistic AI-generated illustrative images created for this site. They are not documentary photographs of Burj Al Aweer workers, clients or completed projects. Original generation files are retained outside the checkout in `/workspace/generated_images`. The architectural SVG placeholders have been removed. See `public/images/ASSETS.md` for provenance.
 - Photography downloads from `images.unsplash.com` were blocked with HTTP 403. Network domain additions were saved to the environment draft; saving did not activate runtime access.
