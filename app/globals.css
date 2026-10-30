@@ -16,3 +16,25 @@
 .intro-image .image-label{z-index:1}
 .hero-caption{text-shadow:0 1px 12px #08182ca6}
 @media(max-width:600px){.hero>.photo img{object-position:76% center}}
+
+/* Restrained interaction details complement the one-time section reveals. */
+.header{transition:background .25s ease,box-shadow .25s ease}
+.header.is-scrolled{background:#ffffffed;box-shadow:0 8px 26px #101e380c}
+.button svg,.text-link svg,.download svg,.circle-arrow{transition:transform .25s ease}
+.service-card{transition:box-shadow .3s ease,border-color .3s ease}
+.trade-tabs button{transition:color .2s ease,border-color .2s ease,background .2s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .button:hover svg,.text-link:hover svg,.download:hover svg{transform:translate(2px,-2px)}
+ .service-card:hover{border-color:#c8d2df;box-shadow:0 10px 28px #101e380d}
+ .service-card:hover .circle-arrow{transform:rotate(6deg)}
+ .trade-tabs button:hover{background:#ffffff04}
+ .header nav a:after{content:'';height:2px;background:var(--red);position:absolute;bottom:6px;left:0;width:20px;transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+ .header nav a:hover:after,.header nav a[aria-current]:after{transform:scaleX(1)}
+}
+@media(max-width:900px) and (prefers-reduced-motion:no-preference){
+ .header nav.open{animation:nav-enter .2s ease-out both}
+ @keyframes nav-enter{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
+}
+@media(prefers-reduced-motion:reduce){
+ .button:hover,.button:hover svg,.text-link:hover svg,.download:hover svg,.service-card:hover .photo img,.industry-card:hover img{transform:none}
+}

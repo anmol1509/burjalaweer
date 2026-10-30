@@ -54,3 +54,9 @@ All enquiries are addressed to `info@burjalaweer.com`; the enquirer's email is u
 5. Set the final canonical origin before production. Domain connection and DNS changes require separate approval.
 
 The user reports the site is deployed at https://burjalaweer.vercel.app. This cloud environment cannot independently verify the live deployment because outbound access returns HTTP 403. Updates are pushed to `feat/corporate-website`; Vercel deployment depends on its configured branch. Email delivery still requires configuration. No DNS changes have been performed.
+
+## Motion and contact formatting
+
+`components/site-motion.tsx` adds one-time, viewport-triggered reveals with short staggered timings using Motion. It cleans up on route changes and leaves content readable without JavaScript. Reduced-motion users receive static content; CSS hover and mobile menu effects also respect that preference. The header gains a restrained shadow after scrolling. No looping parallax or animated counters delay access to content.
+
+Website phone numbers display as `+971 6 568 6510`; click-to-call links and organization metadata use `+97165686510` (the domestic leading zero is omitted after the country code). The original downloadable company profile is retained as supplied.
