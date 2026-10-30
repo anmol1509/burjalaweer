@@ -38,10 +38,10 @@ All enquiries are addressed to `info@burjalaweer.com`; the enquirer's email is u
 
 ## Assets and launch requirements
 
-- `public/company-profile.pdf` is the supplied original. Company logo, client logos and the hero photograph were extracted from it. Business copy follows that profile. Client logos are low-resolution source assets, not recreated wordmarks.
+- `public/company-profile.pdf` is the supplied original. The legacy company logo, client logos and original workforce photograph were extracted from it. Business copy follows that profile. Client logos are low-resolution source assets, not recreated wordmarks.
 - The original architectural logo supplied in the ZIP is used unchanged at `public/images/burj-al-aweer-logo.png` in the header, footer and organization metadata.
-- The PDF hero is only 396×224 pixels and is a temporary source asset. It needs a licensed high-resolution replacement.
-- `public/images/{construction,infrastructure,industrial,carpentry,steel,masonry,team,planning}.svg` are deliberate architectural placeholders. They are not photographs of company projects. Replace them with licensed, subject-appropriate photography and update the `Photo` asset extension mapping in `components/site.tsx`. Do not launch as a final photography-complete design.
+- The low-resolution PDF hero has been replaced with a high-resolution photorealistic generated workforce image.
+- `public/images/{hero-workforce,construction,infrastructure,industrial,carpentry,steel,masonry,team,planning}.png` are photorealistic AI-generated illustrative images created for this site. They are not documentary photographs of Burj Al Aweer workers, clients or completed projects. Original generation files are retained outside the checkout in `/workspace/generated_images`. The architectural SVG placeholders have been removed. See `public/images/ASSETS.md` for provenance.
 - Photography downloads from `images.unsplash.com` were blocked with HTTP 403. Network domain additions were saved to the environment draft; saving did not activate runtime access.
 - No unverified certifications, testimonials, extra industries, office addresses or social accounts were added.
 
@@ -53,4 +53,4 @@ All enquiries are addressed to `info@burjalaweer.com`; the enquirer's email is u
 4. Deploy, verify all seven pages, submit a real enquiry and confirm receipt at the company inbox.
 5. Set the final canonical origin before production. Domain connection and DNS changes require separate approval.
 
-No deployment or DNS change has been performed. No live URL is claimed. Production build readiness is separate from outstanding photography and email configuration.
+The user reports the site is deployed at https://burjalaweer.vercel.app. This cloud environment cannot independently verify the live deployment because outbound access returns HTTP 403. Updates are pushed to `feat/corporate-website`; Vercel deployment depends on its configured branch. Email delivery still requires configuration. No DNS changes have been performed.

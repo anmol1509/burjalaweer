@@ -7,3 +7,12 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 
 .footer-grid>div:first-child>img{height:auto;object-fit:contain;flex-shrink:0}
+
+/* Keep the subject visible as photographs move between editorial and narrow card crops. */
+.photo-construction img{object-position:35% center}
+.photo-infrastructure img{object-position:center center}
+.photo-carpentry img,.photo-steel img,.photo-masonry img{object-position:45% center}
+.intro-image:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#091b3380,transparent 45%);pointer-events:none}
+.intro-image .image-label{z-index:1}
+.hero-caption{text-shadow:0 1px 12px #08182ca6}
+@media(max-width:600px){.hero>.photo img{object-position:76% center}}
