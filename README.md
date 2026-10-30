@@ -57,6 +57,6 @@ The user reports the site is deployed at https://burjalaweer.vercel.app. This cl
 
 ## Motion and contact formatting
 
-`components/site-motion.tsx` adds one-time, viewport-triggered reveals with short staggered timings using Motion. It cleans up on route changes and leaves content readable without JavaScript. Reduced-motion users receive static content; CSS hover and mobile menu effects also respect that preference. The header gains a restrained shadow after scrolling. No looping parallax or animated counters delay access to content.
+`components/site-motion.tsx` orchestrates layered hero text entrances, cinematic image zooms, directional image wipes, staggered section/card reveals and pointer-following card tilt. `components/motion-details.tsx` provides animated metrics, a reading-progress indicator and an accessible back-to-top button. The process line draws on entry; buttons have a hover sheen and client logos lift on hover. Effects clean up on route changes, and server-rendered content remains readable without JavaScript. Reduced-motion users receive static imagery, final metric values and no scroll progress animation; touch devices omit pointer tilt. The header gains a shadow after scrolling.
 
 Website phone numbers display as `+971 6 568 6510`; click-to-call links and organization metadata use `+97165686510` (the domestic leading zero is omitted after the country code). The original downloadable company profile is retained as supplied.
